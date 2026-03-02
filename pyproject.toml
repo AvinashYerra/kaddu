@@ -1,0 +1,17 @@
+[project]
+name = "kaddu"
+version = "0.1.1"
+description = "Generate project structure from AI-generated file trees"
+readme = "README.md"
+requires-python = ">=3.8"
+authors = [
+    { name = "Avinash" }
+]
+license = { text = "MIT" }
+
+[project.scripts]
+kaddu = "kaddu.cli:main"
+
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
