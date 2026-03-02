@@ -4,18 +4,20 @@ Most side projects now start with AI-generated ideas — including the file stru
 Instead of manually creating folders and files, just paste the AI-generated structure into a file, and tao will generate the entire project structure for you.
 
 What It Does
-Parses a markdown-style project tree
-Automatically creates folders and files
-Supports dry-run mode
-Prevents accidental overwrites (unless --force is used)
+1. Parses a markdown-style project tree
+2. Automatically creates folders and files
+3. Supports dry-run mode
+4. Prevents accidental overwrites (unless --force is used)
 
 Perfect for:
-AI-generated project scaffolds
-Quick prototyping
-Bootstrapping side projects
+1. AI-generated project scaffolds
+2. Quick prototyping
+3. Bootstrapping side projects
 
-Installation 
-pip install tao
+Installation:
+'''
+pip install kaddu
+'''
 
 Create a file called structure.md:
 
@@ -28,10 +30,15 @@ my-app/
 └── README.md
 
 Generate the structure:
-tao structure.md
+'''
+kaddu structure.md
+'''
 
 Dry Run (Preview Without Creating Files):
-tao structure.md --dry-run
-
+'''
+kaddu structure.md --dry-run
+'''
 Overwrite Existing Files:
-tao structure.md --force
+'''
+kaddu structure.md --force
+'''
