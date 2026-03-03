@@ -19,17 +19,23 @@ def clean_lines(content: str) -> List[str]:
 
 
 def get_depth_and_name(line: str):
-    stripped = line.lstrip()
+    line = line.rstrip()
 
-    if not line.startswith(("├", "└", "│")):
-        return 0, stripped
+    if re.fullmatch(r"[\s│├└─]+", line):
+        return None, None
 
     match = re.search(r"[├└]", line)
-    if not match:
-        return 0, stripped
-    prefix_length = match.start()
-    depth = prefix_length // 4 + 1
-    name = re.sub(r"^[\s│├└─]+", "", line).strip()
+
+    if match:
+        prefix_length = match.start()
+        depth = prefix_length // 4 + 1
+        name = re.sub(r"^[\s│├└─]+", "", line).strip()
+    else:
+        depth = 0
+        name = line.strip()
+
+    if not name:
+        return None, None
 
     return depth, name
 
@@ -41,7 +47,11 @@ def parse_structure(content: str) -> Node:
     root = None
 
     for raw_line in lines:
-        depth, name = get_depth_and_name(raw_line)
+
+        result = get_depth_and_name(raw_line)
+        if result == (None, None):
+            continue
+        depth, name = result
 
         is_file = not name.endswith("/")
         name = name.rstrip("/")

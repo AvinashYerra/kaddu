@@ -1,7 +1,16 @@
-my-app/
+my-python-app/
+│
 ├── app/
+│   ├── __init__.py
 │   ├── main.py
-│   └── utils.py
+│   ├── utils.py
+│   └── config.py
+│
 ├── tests/
-│   └── test_main.py
-└── README.md
+│   ├── test_main.py
+│   └── test_utils.py
+│
+├── requirements.txt
+├── setup.py
+├── README.md
+└── .gitignore
