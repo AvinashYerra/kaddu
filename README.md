@@ -1,7 +1,7 @@
 We are in the era of AI.
 Most side projects now start with AI-generated ideas — including the file structure.
 
-Instead of manually creating folders and files, just paste the AI-generated structure into a file, and tao will generate the entire project structure for you.
+Instead of manually creating folders and files, just paste the AI-generated structure into a file, and kaddu will generate the entire project structure for you.
 
 What It Does
 1. Parses a markdown-style project tree
@@ -21,6 +21,7 @@ pip install kaddu
 
 Create a file called structure.md:
 
+'''
 my-app/
 ├── app/
 │   ├── main.py
@@ -28,6 +29,7 @@ my-app/
 ├── tests/
 │   └── test_main.py
 └── README.md
+'''
 
 Generate the structure:
 ```
