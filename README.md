@@ -15,9 +15,9 @@ Perfect for:
 3. Bootstrapping side projects
 
 Installation:
-'''
+```
 pip install kaddu
-'''
+```
 
 Create a file called structure.md:
 
@@ -30,15 +30,15 @@ my-app/
 └── README.md
 
 Generate the structure:
-'''
+```
 kaddu structure.md
-'''
+```
 
 Dry Run (Preview Without Creating Files):
-'''
+```
 kaddu structure.md --dry-run
-'''
+```
 Overwrite Existing Files:
-'''
+```
 kaddu structure.md --force
-'''
+```
