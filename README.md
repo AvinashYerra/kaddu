@@ -21,7 +21,7 @@ pip install kaddu
 
 Create a file called structure.md:
 
-'''
+```
 my-app/
 ├── app/
 │   ├── main.py
@@ -29,7 +29,7 @@ my-app/
 ├── tests/
 │   └── test_main.py
 └── README.md
-'''
+```
 
 Generate the structure:
 ```
